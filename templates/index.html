@@ -9,7 +9,7 @@
 		<title>Eventually by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
 	</head>
 	<body class="is-preload">
 
@@ -20,7 +20,7 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" action="{{url_for('predict')}}" method="post">
+			<form id="signup-form" action="{{url_for('predict', filename='app.py')}}" method="post">
 				<input type="text" name="Tipo" id="Tipo" placeholder="Casa/Apartamento" required="required" min="0"/>
 				<br>
 				<input type="number" name="Dormitórios" id="Dormitórios" placeholder="Dormitórios" required="required" min="0"/>
@@ -33,9 +33,10 @@
 				<br>
 				<input type="number" name="Suítes" id="Suítes" placeholder="Suítes" required="required" min="0"/>
 				<br>
-				<input type="text" name="Mobiliado" id="Mobiliado" placeholder="Mobiliado" required="required"/>
+				<input type="text" name="Mobiliado" id="Mobiliado" placeholder="Mobiliado (Sim/Não)" required="required"/>
 				<br>
 				<input type="submit" value="Calcular" />
+				<!-- <button type="submit" class="btn btn-primary btn-block btn-large"> Calcular! </button> -->
 			</form>
 			<b>{{prediction_text}}</b>
 
@@ -52,7 +53,7 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 
 	</body>
 </html>
