@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-	Eventually by HTML5 UP
+	Strata by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Eventually by HTML5 UP</title>
+		<title>Strata by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
@@ -15,45 +15,146 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1>Aluguel em São Carlos</h1>
-				<p>Estime o preço do aluguel. Escolha abaixo e calculamos pra você :)</p>
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="static/images/avatar.jpg" alt="" /></a>
+					<h1><strong>SanCasa</strong>, pra você que<br />
+					quer estimar o valor do aluguel<br />
+					com facilidade.</h1>
+				</div>
 			</header>
 
-		<!-- Signup Form -->
-			<form id="signup-form" action="{{url_for('predict', filename='app.py')}}" method="post">
-				<input type="text" name="Tipo" id="Tipo" placeholder="Casa/Apartamento" required="required" min="0"/>
-				<br>
-				<input type="number" name="Dormitórios" id="Dormitórios" placeholder="Dormitórios" required="required" min="0"/>
-				<br>
-				<input type="number" name="Banheiros" id="Banheiros" placeholder="Banheiros" required="required" min="0"/>
-				<br>
-				<input type="number" name="Garagens" id="Garagens" placeholder="Garagens" required="required" min="0"/>
-				<br>
-				<input type="text" name="Bairro" id="Bairro" placeholder="Bairro" required="required" min="0"/>
-				<br>
-				<input type="number" name="Suítes" id="Suítes" placeholder="Suítes" required="required" min="0"/>
-				<br>
-				<input type="text" name="Mobiliado" id="Mobiliado" placeholder="Mobiliado (Sim/Não)" required="required"/>
-				<br>
-				<input type="submit" value="Calcular" />
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Escolha abaixo como você quer que seja o imóvel: </h2>
+						</header>
+						<form id="signup-form" action="{{url_for('predict', filename='app.py')}}" method="post">
+						<input type="text" name="Tipo" id="Tipo" placeholder="Casa/Apartamento" required="required" min="0"/>
+						<br>
+						<input type="number" name="Dormitórios" id="Dormitórios" placeholder="Dormitórios" required="required" min="0"/>
+						<br>
+						<input type="number" name="Banheiros" id="Banheiros" placeholder="Banheiros" required="required" min="0"/>
+						<br>
+						<input type="number" name="Garagens" id="Garagens" placeholder="Garagens" required="required" min="0"/>
+						<br>
+						<input type="text" name="Bairro" id="Bairro" placeholder="Bairro" required="required" min="0"/>
+						<br>
+						<input type="number" name="Suítes" id="Suítes" placeholder="Suítes" required="required" min="0"/>
+						<br>
+						<input type="text" name="Mobiliado" id="Mobiliado" placeholder="Mobiliado (Sim/Não)" required="required"/>
+						<br>
+						<input type="submit" value="Calcular" />
 				<!-- <button type="submit" class="btn btn-primary btn-block btn-large"> Calcular! </button> -->
-			</form>
-			<b>{{prediction_text}}</b>
+						</form>
+						<b>{{prediction_text}}</b>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Estatísticas</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="static/images/fulls/1.png" class="image fit thumb"><img src="static/images/thumbs/1.png" alt="" /></a>
+								<h3>Magna sed consequat tempus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="static/images/fulls/2.png" class="image fit thumb"><img src="static/images/thumbs/2.png" alt="" /></a>
+								<h3>Ultricies lacinia interdum</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="static/images/fulls/3.png" class="image fit thumb"><img src="static/images/thumbs/3.png" alt="" /></a>
+								<h3>Tortor metus commodo</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="static/images/fulls/4.png" class="image fit thumb"><img src="static/images/thumbs/4.png" alt="" /></a>
+								<h3>Quam neque phasellus</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="static/images/fulls/5.png" class="image fit thumb"><img src="static/images/thumbs/5.png" alt="" /></a>
+								<h3>Nunc enim commodo aliquet</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="static/images/fulls/5.png" class="image fit thumb"><img src="static/images/thumbs/5.png" alt="" /></a>
+								<h3>Risus ornare lacinia</h3>
+								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+							</article>
+						</div>
+						<!-- <ul class="actions">
+							<li><a href="#" class="button">Full Portfolio</a></li>
+						</ul> -->
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+						<h2>Get In Touch</h2>
+						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+						<div class="row">
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+										1234 Somewhere Rd.<br />
+										Nashville, TN 00000<br />
+										United States
+									</li>
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+										000-000-0000
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="#">hello@untitled.tld</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+
+			</div>
 
 		<!-- Footer -->
 			<footer id="footer">
-				<p> Não sabe qual bairro escolher? Dê uma olhada no mapa <a href=>aqui</a>.</p>
-				<ul class="icons">
-					<li><a href="" class="fa fa-chart-line"> Estatísticas de aluguéis</a></li>
-					<li><a href="#" class="fa fa-city"> Conheça a cidade</a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Aluguel_SãoCarlos.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
 
 	</body>
 </html>

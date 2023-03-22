@@ -18,7 +18,7 @@ df['Mobiliado']= df['Mobiliado'].astype('category')
 #calculate the final value of the rent (20% discount) and drop old value 
 df['Valor_final'] = df['Valor']*0.8
 df.drop('Valor', axis=1, inplace=True)
-#standardize the tipes of the apartments and houses
+#standardize the tipes of apartments and houses
 df['Tipo'].replace(['Apartamento Flat com ...', 'Apartamento Apartamento ...', 'Apartamento Studio', 
 'Apartamento Duplex', 'Apartamento Cobertura', 'Apartamento Padrão', 'Apartamento Kitchnet ...', 'Apartamento Flat sem ...',
 'Apartamento Kitnet', 'Apartamento Apartamen...', 'Apartamento Flat'], ['Apartamento', 'Apartamento', 'Apartamento', 'Apartamento', 'Apartamento', 'Apartamento', 
