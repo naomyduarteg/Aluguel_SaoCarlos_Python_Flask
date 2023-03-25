@@ -26,6 +26,7 @@ df['Tipo'].replace(['Apartamento Flat com ...', 'Apartamento Apartamento ...', '
 df['Tipo'].replace(['Casa Padrão', 'Casa Condomínio', 'Casa Sobrado', 'Casa Edícula'], ['Casa', 'Casa', 'Casa', 'Casa'], inplace=True)
 #drop Nan values and duplicated values
 df.drop(index=682, inplace=True)
+df.drop(index=835, inplace=True)
 df.drop_duplicates(inplace=True)
 #applying log transformation
 df['Valor_final'] = np.log1p(df['Valor_final'])
