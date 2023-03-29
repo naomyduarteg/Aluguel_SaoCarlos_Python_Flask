@@ -73,4 +73,4 @@ xgb = Pipeline(steps=[('preprocessor', preprocessor),
 xgb_tuned = xgb.fit(X_train, y_train.values.ravel())
 
 # Export model
-pickle.dump(xgb_tuned, open('model.pkl', "wb"))
+pickle.dump(xgb_tuned, open('ml_model/model.pkl', "wb"))

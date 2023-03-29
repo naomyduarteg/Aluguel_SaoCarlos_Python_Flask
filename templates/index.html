@@ -37,7 +37,12 @@
 							<h2>Escolha abaixo como você quer que seja o imóvel: </h2>
 						</header>
 						<form id="signup-form" action="{{url_for('predict', filename='app.py')}}" method="post">
-						<input type="text" name="Tipo" id="Tipo" placeholder="Casa/Apartamento" required="required"/>
+						<!-- <input type="text" name="Tipo" id="Tipo" placeholder="Casa/Apartamento" required="required"/> -->
+						<select name="Tipo" id="Tipo" required>
+							<option value="">Tipo</option>
+							<option value="Casa">Casa</option>
+							<option value="Apartamento">Apartamento</option>
+						</select>
 						<br>
 						<input type="number" name="Dormitórios" id="Dormitórios" placeholder="Dormitórios" required="required" min="0"/>
 						<br>
@@ -49,13 +54,22 @@
 						<br>
 						<input type="number" name="Suítes" id="Suítes" placeholder="Suítes" required="required" min="0"/>
 						<br>
-						<input type="text" name="Mobiliado" id="Mobiliado" placeholder="Mobiliado (Sim/Não)" required="required"/>
+						<!-- <input type="text" name="Mobiliado" id="Mobiliado" placeholder="Mobiliado (Sim/Não)" required="required"/> -->
+						<select name="Mobiliado" id="Mobiliado" required>
+							<option value="">Mobiliado</option>
+							<option value="Sim">Sim</option>
+							<option value="Não">Não</option>
+						</select>
 						<br>
-						<input type="submit" value="Calcular" />
+						<div style="display: flex; justify-content: space-between;">
+							<input type="submit" value="Calcular" />
+							<input type="reset" value="Limpar" />
+						</div>
 				<!-- <button type="submit" class="btn btn-primary btn-block btn-large"> Calcular! </button> -->
 						</form>
-						<b>{{prediction_text}}</b>
+						<h3 id="resultado"></h3>
 					</section>
+				
 
 				<!-- Two -->
 					<section id="two">

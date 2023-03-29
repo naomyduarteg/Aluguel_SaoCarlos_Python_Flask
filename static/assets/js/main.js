@@ -115,3 +115,50 @@
 			});
 
 })(jQuery);
+
+window.smoothScroll = function(target) {
+	let scrollContainer = document.getElementById(target);
+    let speed = 25; // quanto maior, mais lento
+    do {
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    let targetY = 0;
+    do {
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, speed);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+
+$(document).on('submit', '#signup-form', function(e){
+	e.preventDefault();
+	let url = $(this).prop('action');
+	let form = new FormData($(this)[0]);
+
+	document.getElementById('resultado').innerHTML = 'Carregando resultado...';
+
+	$.ajax({
+		url: url,
+		method: 'post',
+		// dataType: 'json',
+		data: form,
+		processData: false,
+		contentType: false,
+		success: function(res){
+			document.getElementById('resultado').innerHTML = res;
+		},
+		error: function(res){
+			console.error(res)
+		}
+	})
+});
