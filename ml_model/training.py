@@ -11,6 +11,7 @@ import pickle
 dados = pd.read_csv("ml_model/tabela_aluguel_completa.csv")
 df = dados.copy()
 df.drop(columns="Unnamed: 0", inplace=True)
+df['Bairro'] = df['Bairro'].str.lstrip()
 #change data type from object to category
 df['Tipo']= df['Tipo'].astype('category')
 df['Bairro']= df['Bairro'].astype('category')
