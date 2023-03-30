@@ -1,6 +1,6 @@
 # SanCasa : estime o valor do aluguel em São Carlos
 
-Projeto de Machine Learning para prever o valor do aluguel em São Carlos com base nas características do imóvel aluguado, que são: tipo de imóvel (casa/apartamento), número de dormitórios, banheiros, garagens, suítes, mobiliado (sim/não). 
+Projeto de Machine Learning para prever o valor do aluguel em São Carlos com base nas características do imóvel alugado, que são: tipo de imóvel (casa/apartamento), número de dormitórios, banheiros, garagens, suítes, mobiliado (sim/não). 
 
 Estrutura do projeto:
 <pre>
