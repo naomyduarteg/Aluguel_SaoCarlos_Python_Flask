@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 import pickle
 
@@ -54,7 +54,7 @@ categorical_transformer = Pipeline(steps=[
     ('onehot', OneHotEncoder(handle_unknown='ignore'))
 ])
 
-numerical_transformer = Pipeline(steps=[('scaler', MinMaxScaler())])
+numerical_transformer = Pipeline(steps=[('scaler', StandardScaler())])
 
 # Bundle preprocessing for numerical and categorical data
 preprocessor = ColumnTransformer(
